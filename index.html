@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="/assets/cabeça de boi.png">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jersey+15&display=swap" rel="stylesheet">
+    <title>Tela de início</title>
+</head>
+<body>
+    <div class="B-container chakra-petch-regular">
+        <div id="Background"></div>
+            <div class="container">
+                <div class="l-container">
+                  <h1 id="h11">Fazer login</h1>
+                  <h4 id="h51">Não tem uma conta? <br> Cadastre-se:</h4>                  
+                    <button class="btncriarconta">Criar conta</button>
+                    <div class="favicon">
+                      <img class="fav" src="/assets/google.png" alt="Google">
+                      <img class="fav" src="/assets/facebook.png" alt="Facebook">
+                      <img class="fav" src="/assets/apple.png" alt="Apple">
+                  </div>
+
+
+            </div>
+            <div class="d-container">
+                <div id="d-inside">
+                    <form action="/verificar_senha" method="post">
+                        <label id="eou" for="email_or_username"></label>
+                            <input class="forms" type="text" id="email_or_username" placeholder="Email ou nome de usuário" name="email_or_username" required>
+                        <br>
+                        <label id="senha" for="password"></label>
+                            <input class="forms" type="text" name="senha" placeholder="Senha" required>    
+                        <br>
+                        <button class="btnsubmit" type="submit">Acessar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Guerr Names</h1>
+    <ul>
+        {% for guerr_name in guerr_names %}
+            <li>{{ guerr_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
